@@ -1,61 +1,40 @@
-#ToDo List Application
+Webpage Query Application
+This application allows users to fetch content from a webpage, process it, and query the content using OpenAI's GPT-3.5-turbo model. Built with Streamlit, it provides an interactive interface for users to input a URL and ask questions about the webpage content.
 
-#Overview
-The ToDo List Application is a simple and interactive web application that allows users to manage their tasks efficiently. The design for the application was created using Figma and then converted into a functional web application using HTML, CSS, and JavaScript.
+Features
+-Fetch content from any webpage.
+-Process and extract text content using BeautifulSoup.
+-Query the extracted content using OpenAI's GPT-3.5-turbo model.
+-Interactive web interface built with Streamlit.
 
-#Features
-- Add New Tasks: Users can add new tasks to their to-do list.
-- Mark Tasks as Completed: Users can mark tasks as completed, which will move them to the "Done" section.
-- Delete Tasks: Users can delete tasks from both the to-do and done lists.
-- Task Counter: Displays the number of tasks to be done and tasks that are completed.
 
-#Technology Stack
-- Design Tool: Figma
-- Frontend: HTML, CSS, JavaScript
+Installation:
+1.Clone the repository:
+ git clone https://github.com/your-username/webpage-query-app.git
+ cd webpage-query-app
+2.Create and activate a virtual environment:
+   python -m venv venv
+   source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+3.Install the required packages:
+   streamlit: For building the interactive web interface.
+   requests: For making HTTP requests to fetch webpage content.
+   beautifulsoup4: For parsing and extracting text from HTML content.
+   openai: For interacting with the OpenAI API.
+4.Set up OpenAI API key:
+   You can set your OpenAI API key in the environment variables for better security. Create a .env file and add your key:
+   OPENAI_API_KEY=your_openai_api_key
+   Alternatively, you can directly set your API key in the app.py file (less secure).
 
-#Directory Structure
-/todo-list-app
-|-- index.html
-|-- styles.css
-|-- script.js
-|-- bg-mobile-dark.jpg
+Usage:
+1.Run the Streamlit application
+  streamlit run app.py
+2.Use the application
+  Enter the URL of the webpage you want to fetch.
+  Click on "Fetch and Process" to retrieve and process the webpage content.
+  Enter your query in the provided input box.
+  Click on "Query Document" to get the response from the GPT-3.5-turbo model based on the webpage content.
 
-#Getting Started
-
-#Prerequisites
--++++++++++++++++++++++++++++++++++++++ Web browser (e.g., Chrome, Firefox)
-- Code editor (e.g., VSCode, Sublime Text)
-
-#Setup Instructions
-1. Download the Project Files:
-   - Download the project files from the repository or extract the provided ZIP file into a directory on your computer.
-
-2. Open the Project Directory:
-   - Open the project directory in your code editor.
-
-3. Run the Application:
-   - Open `index.html` in your web browser to view and interact with the ToDo List Application.
-
-#File Descriptions
-
-1. index.html:
-   - This is the main HTML file that contains the structure of the application.
-
-2. styles.css:
-   - This CSS file contains all the styles for the application, including layout, colors, and font styling.
-
-3. script.js:
-   - This JavaScript file contains the functionality for adding, completing, and deleting tasks.
-
-4. bg-mobile-dark.jpg:
-   - This is the background image used in the application.
-
-#Design Credits
-- Figma: The initial design for this application was created using Figma, which is a powerful design tool for creating user interfaces.
-
-#Notes
-- This project demonstrates a simple implementation of a to-do list application using basic web technologies. Additional features and enhancements can be added as needed.
-- Make sure to test the application across different web browsers to ensure compatibility.
-
-#Conclusion
-The ToDo List Application is a great starting point for anyone looking to create a task management tool. By following this documentation, you should be able to understand the structure and functionality of the application and make any necessary modifications to suit your needs.
+Acknowledgements:
+ Streamlit for the web application framework.
+ OpenAI for the GPT-3.5-turbo model.
+ BeautifulSoup for HTML parsing.
