@@ -3,10 +3,9 @@ import streamlit as st
 import requests
 from bs4 import BeautifulSoup
 
-# Set your API key directly in the code (less secure)
-openai.api_key = 'sk-proj-oHJ1F8GVspwiKQ5iT8McT3BlbkFJRzS8a6D5yB79aRnMdUgH'
 
-# Or set the API key from the environment variable (more secure)
+
+#set the API key from the environment variable (more secure)
 #openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def fetch_webpage(url):
