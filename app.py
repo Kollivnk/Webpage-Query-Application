@@ -2,11 +2,12 @@ import openai
 import streamlit as st
 import requests
 from bs4 import BeautifulSoup
+import os
 
 
 
 #set the API key from the environment variable (more secure)
-#openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def fetch_webpage(url):
     try:
